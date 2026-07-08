@@ -231,13 +231,12 @@ a {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: block;
   margin: 0 auto 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #05141f;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 30px rgba(5, 20, 31, 0.25);
 }
 
 .status-row {
