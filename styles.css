@@ -1,12 +1,12 @@
 :root {
-  --bg: #07111f;
-  --surface: rgba(255, 255, 255, 0.08);
-  --text: #f4f7fb;
-  --muted: #90a4bf;
-  --accent: #5eead4;
-  --accent-2: #7c93ff;
-  --border: rgba(255, 255, 255, 0.14);
-  --shadow: 0 20px 50px rgba(3, 8, 20, 0.28);
+  --bg: #000000;
+  --surface: rgba(255, 255, 255, 0.05);
+  --text: #ffffff;
+  --muted: #999999;
+  --accent: #000000;
+  --accent-2: #333333;
+  --border: rgba(255, 255, 255, 0.15);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -21,7 +21,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top left, #16253d 0%, var(--bg) 45%, #040812 100%);
+  background: #000000;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -47,13 +47,13 @@ a {
   position: absolute;
   border-radius: 50%;
   filter: blur(40px);
-  opacity: 0.22;
+  opacity: 0.05;
 }
 
 .background-shapes span:nth-child(1) {
   width: 260px;
   height: 260px;
-  background: var(--accent);
+  background: #333333;
   top: 60px;
   left: -80px;
 }
@@ -61,7 +61,7 @@ a {
 .background-shapes span:nth-child(2) {
   width: 220px;
   height: 220px;
-  background: var(--accent-2);
+  background: #444444;
   right: -50px;
   top: 240px;
 }
@@ -69,7 +69,7 @@ a {
 .background-shapes span:nth-child(3) {
   width: 180px;
   height: 180px;
-  background: #d946ef;
+  background: #555555;
   bottom: 80px;
   left: 30%;
 }
@@ -84,7 +84,7 @@ a {
   align-items: center;
   padding: 1rem 1.2rem;
   border: 1px solid var(--border);
-  background: rgba(7, 17, 31, 0.74);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(14px);
   border-radius: 999px;
   position: sticky;
@@ -146,7 +146,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.24em;
   font-size: 0.78rem;
-  color: var(--accent);
+  color: var(--muted);
   margin-bottom: 0.8rem;
 }
 
@@ -186,13 +186,15 @@ a {
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  color: #04121e;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
 }
 
 .btn.secondary {
   border-color: var(--border);
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
+  color: var(--text);
 }
 
 .contact-list {
@@ -245,8 +247,8 @@ a {
   gap: 0.4rem;
   padding: 0.5rem 0.8rem;
   border-radius: 999px;
-  background: rgba(94, 234, 212, 0.14);
-  color: #bcf8f1;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
   margin-top: 0.6rem;
 }
 
@@ -254,7 +256,7 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--text);
 }
 
 .metrics {
@@ -331,7 +333,7 @@ a {
 }
 
 .meta {
-  color: var(--accent);
+  color: var(--muted);
   margin: 0 0 0.8rem;
   font-weight: 600;
 }
@@ -388,6 +390,55 @@ a {
   margin: 0;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.info-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem;
+  backdrop-filter: blur(14px);
+}
+
+.info-item h4 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.info-item a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.info-item a:hover {
+  color: var(--text);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
 .footer {
   padding: 1rem 0 2rem;
   color: var(--muted);
@@ -427,7 +478,7 @@ a {
     right: 1rem;
     flex-direction: column;
     padding: 0.8rem;
-    background: rgba(7, 17, 31, 0.96);
+    background: rgba(0, 0, 0, 0.96);
     border: 1px solid var(--border);
     border-radius: 16px;
     min-width: 160px;
